@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wound Analysis Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .section {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            display: block;
+            margin: 10px auto;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 6px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Wound Analysis Results</h1>
+
+<!-- Segmented Image First -->
+<!-- Segmented Image First -->
+<div class="section">
+    <h3>🩹 Segmented Image</h3>
+    <img src="{{ image_path }}" alt="Segmented Image" style="width: 512px; height: 512px; object-fit: contain;">
+</div>
+
+
+<!-- Healing Time and Area Info -->
+<div class="section">
+    <p><strong>🧠 Predicted Healing Time:</strong> {{ prediction }}</p>
+    <p><strong>📏 Wound Area (Pixels):</strong> {{ area_pixels }}</p>
+    <p><strong>📐 Wound Area (mm²):</strong> {{ area_mm2 }} mm²</p>
+    <p><strong>🔍 Predicted Wound Type:</strong> {{ wound_type }} </p>
+</div>
+
+<!-- Explanation -->
+<div class="section">
+    <h3>🧾 Explanation Report</h3>
+    <pre>{{ explanation }}</pre>
+</div>
+
+
+</body>
+</html>
